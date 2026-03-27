@@ -96,46 +96,71 @@
     <main class="container">
         <!-- FAQ Section -->
         <section id="faq">
-            <h2 class="section-title">❓ 常见问题</h2>
-            <p class="text-muted">点击问题查看答案</p>
+            <h2 class="section-title">❓ OpenClaw 常见问题</h2>
+            <p class="text-muted mb-3">点击问题查看答案，涵盖安装、配置、使用全流程</p>
             
             <div class="faq-item">
-                <div class="faq-question">Q: 安装OpenClaw失败怎么办？</div>
+                <div class="faq-question">Q: 如何安装OpenClaw？</div>
                 <div class="faq-answer">
                     <ol>
-                        <li>检查系统要求（Windows 10+ / macOS / Linux）</li>
-                        <li>确保已安装Node.js 18+</li>
-                        <li>使用管理员权限运行安装程序</li>
-                        <li>查看日志文件 <code>install.log</code></li>
+                        <li><strong>Windows用户</strong>：下载一键安装包，双击运行，按提示完成安装</li>
+                        <li><strong>Mac用户</strong>：下载.dmg镜像，拖拽到Applications即可</li>
+                        <li><strong>Linux用户</strong>：使用命令行安装：<code>bash &lt;(curl -fsSL https://install.openclaw.ai)</code></li>
+                        <li><strong>所有平台</strong>：安装后需要配置大模型API（如Step、GLM等）</li>
                     </ol>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 配置API密钥时出错怎么办？</div>
+                <div class="faq-answer">
+                    <ul>
+                        <li>检查API key是否正确（从官网获取，不是登录密码）</li>
+                        <li>确认网络连接，部分国内API需要代理</li>
+                        <li>验证API额度是否充足</li>
+                        <li>查看<code>~/.openclaw/config.json</code>配置格式是否正确</li>
+                    </ul>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">Q: 如何更新到最新版本？</div>
                 <div class="faq-answer">
+                    <p>推荐三种方式：</p>
                     <ol>
-                        <li>打开命令行工具</li>
-                        <li>运行 <code>openclaw update</code></li>
-                        <li>重启应用</li>
+                        <li><strong>自动更新</strong>：打开OpenClaw，点击"检查更新"按钮</li>
+                        <li><strong>命令行</strong>：运行 <code>openclaw update</code></li>
+                        <li><strong>重新安装</strong>：下载最新安装包覆盖安装（配置会保留）</li>
                     </ol>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">Q: 配置错误如何修复？</div>
-                <div class="faq-answer">
-                    <p>运行健康检查工具自动诊断：</p>
-                    <pre><code>openclaw doctor</code></pre>
-                    <p>或手动检查配置文件 <code>~/.openclaw/config.json</code></p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Q: 性能不佳怎么优化？</div>
+                <div class="faq-question">Q: Agent运行缓慢怎么优化？</div>
                 <div class="faq-answer">
                     <ul>
                         <li>减少同时运行的Agent数量</li>
-                        <li>增加内存分配</li>
-                        <li>使用更轻量级模型</li>
-                        <li>清理缓存文件</li>
+                        <li>使用更轻量级模型（如GLM-4-Flash、Step-1.5-Flash）</li>
+                        <li>增加系统内存分配（关闭其他占用大的程序）</li>
+                        <li>清理缓存：<code>openclaw cache clean</code></li>
+                        <li>检查系统资源占用，避免CPU/内存瓶颈</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 如何备份和恢复配置？</div>
+                <div class="faq-answer">
+                    <p><strong>备份</strong>：<code>openclaw backup export</code>（生成备份文件）</p>
+                    <p><strong>恢复</strong>：<code>openclaw backup import &lt;备份文件路径&gt;</code></p>
+                    <p>也可以手动复制 <code>~/.openclaw/</code> 目录到安全位置。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 中文汉化版有什么特别之处？</div>
+                <div class="faq-answer">
+                    <ul>
+                        <li>完整的中文界面，更适合国内用户</li>
+                        <li>预配置国内常用模型API（StepFun、智谱等）</li>
+                        <li>优化国内网络访问速度</li>
+                        <li>一键安装，零门槛使用</li>
+                        <li>本地化文档和技术支持</li>
                     </ul>
                 </div>
             </div>
