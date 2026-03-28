@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OpenClaw鍋ュ悍鐩戞姢瀹?- OpenClaw甯歌闂FAQ銆佹晠闅滆瘖鏂€佹€ц兘浼樺寲銆佹棩蹇楀垎鏋愶紝甯姪浣犳洿濂藉湴浣跨敤OpenClaw銆?>
+    <meta name="keywords" content="OpenClaw,FAQ,甯歌闂,鏁呴殰璇婃柇,鎬ц兘浼樺寲,鏃ュ織鍒嗘瀽,鍋ュ悍妫€鏌?鎶€鏈敮鎸?>
+    <meta name="author" content="Claw鍋ュ悍鐩戞姢瀹?>
+    <!-- Open Graph -->
+    <meta property="og:title" content="OpenClaw鍋ュ悍鐩戞姢瀹?- FAQ涓庢晠闅滆瘖鏂?>
+    <meta property="og:description" content="OpenClaw甯歌闂FAQ銆佹晠闅滆瘖鏂€佹€ц兘浼樺寲銆佹棩蹇楀垎鏋愪竴绔欏紡瑙ｅ喅鏂规銆?>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.clawhealth.icu">
+    <meta property="og:image" content="https://www.clawhealth.icu/images/og-image.png">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="OpenClaw鍋ュ悍鐩戞姢瀹?>
+    <meta name="twitter:description" content="OpenClaw甯歌闂FAQ銆佹晠闅滆瘖鏂€佹€ц兘浼樺寲銆佹棩蹇楀垎鏋愪竴绔欏紡瑙ｅ喅鏂规銆?>
+    <meta name="twitter:image" content="https://www.clawhealth.icu/images/twitter-card.png">
+    <title>OpenClaw鍋ュ悍鐩戞姢瀹?- clawhealth.icu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #10B981;
+            --accent-color: #2A5CAA;
+            --bg-color: #F5F7FA;
+        }
+        body { background-color: var(--bg-color); font-family: system-ui, -apple-system, sans-serif; }
+        .navbar { background-color: var(--primary-color); }
+        .navbar-brand, .nav-link { color: white !important; }
+        .hero {
+            background: linear-gradient(135deg, #059669, var(--primary-color));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        .section-title {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 2rem 0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .faq-question {
+            padding: 1rem;
+            background: #eef;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .faq-answer {
+            padding: 1rem;
+            display: none;
+        }
+        .faq-item.active .faq-answer { display: block; }
+        .upload-zone {
+            border: 2px dashed var(--primary-color);
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            background: #f0fdf4;
+            margin: 2rem 0;
+        }
+        .health-status {
+            display: none;
+            margin-top: 1rem;
+        }
+        .status-good { color: #10B981; }
+        .status-warn { color: #F59E0B; }
+        .status-err { color: #EF4444; }
+        .coming-soon {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        footer { background: #333; color: white; padding: 2rem 0; margin-top: 3rem; }
+        .footer-links a { color: #88d; margin: 0 0.5rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">馃彞 Claw鍋ュ悍鐩戞姢瀹?/a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#faq">甯歌闂</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#health">鍋ュ悍妫€鏌?/a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold">馃彞 OpenClaw鍋ュ悍鐩戞姢瀹?/h1>
+            <p class="lead">瀹夎銆佷娇鐢ㄣ€佹洿鏂板叏鏂逛綅鏀寔</p>
+            <p class="mt-3">馃幆 鍩熷悕鍑哄敭涓細shuo65@qq.com</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2 class="section-title">鉂?OpenClaw 甯歌闂</h2>
+            <p class="text-muted mb-3">鐐瑰嚮闂鏌ョ湅绛旀锛屾兜鐩栧畨瑁呫€侀厤缃€佷娇鐢ㄥ叏娴佺▼</p>
+            
+            <div class="faq-item">
+                <div class="faq-question">Q: 濡備綍瀹夎OpenClaw锛?/div>
+                <div class="faq-answer">
+                    <ol>
+                        <li><strong>Windows鐢ㄦ埛</strong>锛氫笅杞戒竴閿畨瑁呭寘锛屽弻鍑昏繍琛岋紝鎸夋彁绀哄畬鎴愬畨瑁?/li>
+                        <li><strong>Mac鐢ㄦ埛</strong>锛氫笅杞?dmg闀滃儚锛屾嫋鎷藉埌Applications鍗冲彲</li>
+                        <li><strong>Linux鐢ㄦ埛</strong>锛氫娇鐢ㄥ懡浠よ瀹夎锛?code>bash &lt;(curl -fsSL https://install.openclaw.ai)</code></li>
+                        <li><strong>鎵€鏈夊钩鍙?/strong>锛氬畨瑁呭悗闇€瑕侀厤缃ぇ妯″瀷API锛堝Step銆丟LM绛夛級</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 閰嶇疆API瀵嗛挜鏃跺嚭閿欐€庝箞鍔烇紵</div>
+                <div class="faq-answer">
+                    <ul>
+                        <li>妫€鏌PI key鏄惁姝ｇ‘锛堜粠瀹樼綉鑾峰彇锛屼笉鏄櫥褰曞瘑鐮侊級</li>
+                        <li>纭缃戠粶杩炴帴锛岄儴鍒嗗浗鍐匒PI闇€瑕佷唬鐞?/li>
+                        <li>楠岃瘉API棰濆害鏄惁鍏呰冻</li>
+                        <li>鏌ョ湅<code>~/.openclaw/config.json</code>閰嶇疆鏍煎紡鏄惁姝ｇ‘</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 濡備綍鏇存柊鍒版渶鏂扮増鏈紵</div>
+                <div class="faq-answer">
+                    <p>鎺ㄨ崘涓夌鏂瑰紡锛?/p>
+                    <ol>
+                        <li><strong>鑷姩鏇存柊</strong>锛氭墦寮€OpenClaw锛岀偣鍑?妫€鏌ユ洿鏂?鎸夐挳</li>
+                        <li><strong>鍛戒护琛?/strong>锛氳繍琛?<code>openclaw update</code></li>
+                        <li><strong>閲嶆柊瀹夎</strong>锛氫笅杞芥渶鏂板畨瑁呭寘瑕嗙洊瀹夎锛堥厤缃細淇濈暀锛?/li>
+                    </ol>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: Agent杩愯缂撴參鎬庝箞浼樺寲锛?/div>
+                <div class="faq-answer">
+                    <ul>
+                        <li>鍑忓皯鍚屾椂杩愯鐨凙gent鏁伴噺</li>
+                        <li>浣跨敤鏇磋交閲忕骇妯″瀷锛堝GLM-4-Flash銆丼tep-1.5-Flash锛?/li>
+                        <li>澧炲姞绯荤粺鍐呭瓨鍒嗛厤锛堝叧闂叾浠栧崰鐢ㄥぇ鐨勭▼搴忥級</li>
+                        <li>娓呯悊缂撳瓨锛?code>openclaw cache clean</code></li>
+                        <li>妫€鏌ョ郴缁熻祫婧愬崰鐢紝閬垮厤CPU/鍐呭瓨鐡堕</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 濡備綍澶囦唤鍜屾仮澶嶉厤缃紵</div>
+                <div class="faq-answer">
+                    <p><strong>澶囦唤</strong>锛?code>openclaw backup export</code>锛堢敓鎴愬浠芥枃浠讹級</p>
+                    <p><strong>鎭㈠</strong>锛?code>openclaw backup import &lt;澶囦唤鏂囦欢璺緞&gt;</code></p>
+                    <p>涔熷彲浠ユ墜鍔ㄥ鍒?<code>~/.openclaw/</code> 鐩綍鍒板畨鍏ㄤ綅缃€?/p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Q: 涓枃姹夊寲鐗堟湁浠€涔堢壒鍒箣澶勶紵</div>
+                <div class="faq-answer">
+                    <ul>
+                        <li>瀹屾暣鐨勪腑鏂囩晫闈紝鏇撮€傚悎鍥藉唴鐢ㄦ埛</li>
+                        <li>棰勯厤缃浗鍐呭父鐢ㄦā鍨婣PI锛圫tepFun銆佹櫤璋辩瓑锛?/li>
+                        <li>浼樺寲鍥藉唴缃戠粶璁块棶閫熷害</li>
+                        <li>涓€閿畨瑁咃紝闆堕棬妲涗娇鐢?/li>
+                        <li>鏈湴鍖栨枃妗ｅ拰鎶€鏈敮鎸?/li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Check -->
+        <section id="health">
+            <h2 class="section-title">馃拪 鍋ュ悍妫€鏌?/h2>
+            <p>涓婁紶鎮ㄧ殑OpenClaw鏃ュ織鏂囦欢锛岃嚜鍔ㄧ敓鎴愬仴搴锋姤鍛?/p>
+            
+            <div class="upload-zone" id="uploadZone">
+                <input type="file" id="logFile" accept=".log,.json,.txt" style="display:none">
+                <button class="btn btn-primary btn-lg" onclick="document.getElementById('logFile').click()">
+                    馃搧 閫夋嫨鏃ュ織鏂囦欢
+                </button>
+                <p class="mt-2 text-muted">鏀寔 .log, .json, .txt 鏍煎紡</p>
+            </div>
+
+            <div class="coming-soon">
+                <strong>馃毀 鍔熻兘寮€鍙戜腑锛?/strong>
+                <ul class="mb-0 mt-2">
+                    <li>瀹屾暣鐨勬棩蹇楄В鏋愬紩鎿?/li>
+                    <li>鍙鍖栧仴搴锋姤鍛婄敓鎴?/li>
+                    <li>鑷姩闂璇婃柇涓庝慨澶嶅缓璁?/li>
+                    <li>閰嶇疆妫€鏌ヤ笌浼樺寲鏂规</li>
+                </ul>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>馃敀 闅愮淇濇姢锛?/strong> 鎵€鏈夊垎鏋愬湪鎮ㄧ殑娴忚鍣ㄦ湰鍦板畬鎴愶紝鏃ュ織涓嶄細涓婁紶鍒颁换浣曟湇鍔″櫒銆?            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h6>鍙嬫儏閾炬帴</h6>
+            <p class="footer-links">
+                <a href="https://www.dragonclaws.cn">榫欑埅涓浗</a> |
+                <a href="https://www.hotclaw.top">鐑棬Claw</a> |
+                <a href="https://www.freemodel.shop">鍏嶈垂妯″瀷鍟嗗簵</a> |
+                <a href="https://www.clawhealth.icu">Claw鍋ュ悍鐩戞姢瀹?/a> |
+                <a href="https://www.fastclaw.love">蹇埅鐖?/a>
+            </p>
+            <p class="mb-0">漏 2026 Claw鍋ュ悍鐩戞姢瀹? 鎵€鏈夊煙鍚嶅嚭鍞腑锛屾湁鎰忚仈绯伙細<a href="mailto:shuo65@qq.com" class="text-white">shuo65@qq.com</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // FAQ 鎶樺彔
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                q.parentElement.classList.toggle('active');
+            });
+        });
+
+        // 鏂囦欢涓婁紶
+        document.getElementById('logFile').addEventListener('change', function(e) {
+            if (e.target.files.length > 0) {
+                alert('鏂囦欢 "' + e.target.files[0].name + '" 宸查€夋嫨銆傚仴搴锋鏌ュ姛鑳芥鍦ㄥ紑鍙戜腑锛屾暚璇锋湡寰咃紒');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -3,21 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OpenClaw健康监护室 - OpenClaw常见问题FAQ、故障诊断、性能优化、日志分析，帮助你更好地使用OpenClaw。">
-    <meta name="keywords" content="OpenClaw,FAQ,常见问题,故障诊断,性能优化,日志分析,健康检查,技术支持">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.clawhealth.icu/">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#10B981">
+    <!-- SEO Meta -->
+    <meta name="description" content="OpenClaw健康监护室 - 提供FAQ常见问题、故障诊断、性能优化、日志分析，帮助用户更好地使用OpenClaw。">
+    <meta name="keywords" content="OpenClaw,FAQ,常见问题,故障诊断,性能优化,日志分析,健康检查,技术支持,Agent优化">
     <meta name="author" content="Claw健康监护室">
-    <!-- Open Graph -->
-    <meta property="og:title" content="OpenClaw健康监护室 - FAQ与故障诊断">
-    <meta property="og:description" content="OpenClaw常见问题FAQ、故障诊断、性能优化、日志分析一站式解决方案。">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.clawhealth.icu">
+    <meta property="og:url" content="https://www.clawhealth.icu/">
+    <meta property="og:title" content="OpenClaw健康监护室 - FAQ与故障诊断">
+    <meta property="og:description" content="OpenClaw常见问题一站式解决方案，支持日志上传健康检查。">
     <meta property="og:image" content="https://www.clawhealth.icu/images/og-image.png">
-    <!-- Twitter Card -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Claw健康监护室">
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.clawhealth.icu/">
     <meta name="twitter:title" content="OpenClaw健康监护室">
-    <meta name="twitter:description" content="OpenClaw常见问题FAQ、故障诊断、性能优化、日志分析一站式解决方案。">
+    <meta name="twitter:description" content="OpenClaw常见问题FAQ、故障诊断、性能优化、日志分析。">
     <meta name="twitter:image" content="https://www.clawhealth.icu/images/twitter-card.png">
     <title>OpenClaw健康监护室 - clawhealth.icu</title>
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" as="script">
+
+    <!-- Manifest (PWA) -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Smooth Scroll -->
+    <style>html { scroll-behavior: smooth; }</style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "如何安装OpenClaw？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Windows用户下载一键安装包运行；Mac用户下载.dmg拖拽到Applications；Linux用户使用命令行安装。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "配置API密钥时出错怎么办？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "检查API key正确性，确认网络连接，验证API额度，查看配置文件格式。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Agent运行缓慢怎么优化？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "减少同时运行的Agent数量，使用更轻量级模型，增加系统内存分配，清理缓存。"
+          }
+        }
+      ]
+    }
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -65,10 +120,7 @@
             background: #f0fdf4;
             margin: 2rem 0;
         }
-        .health-status {
-            display: none;
-            margin-top: 1rem;
-        }
+        .health-status { display: none; margin-top: 1rem; }
         .status-good { color: #10B981; }
         .status-warn { color: #F59E0B; }
         .status-err { color: #EF4444; }
@@ -81,6 +133,62 @@
         }
         footer { background: #333; color: white; padding: 2rem 0; margin-top: 3rem; }
         .footer-links a { color: #88d; margin: 0 0.5rem; }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #1a1a1a;
+                --text-color: #e0e0e0;
+            }
+            body { background-color: var(--bg-color); color: var(--text-color); }
+            .faq-item { background: #2d2d2d; color: var(--text-color); }
+            .faq-question { background: #3d3d3d; }
+            .upload-zone { background: rgba(16, 185, 129, 0.1); }
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .dark-mode-toggle:hover { transform: scale(1.1); }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 140px;
+            right: 20px;
+            z-index: 999;
+            background: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+
+        /* Sticky Navbar */
+        .navbar { transition: transform 0.3s; }
+        .navbar.navbar-hidden { transform: translateY(-100%); }
     </style>
 </head>
 <body>
@@ -223,16 +331,84 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="返回顶部">↑</button>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="切换暗色模式">
+        <span id="darkModeIcon">🌙</span>
+    </button>
+
+    <!-- Bootstrap JS (deferred) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
     <script>
-        // FAQ 折叠
-        document.querySelectorAll('.faq-question').forEach(q => {
-            q.addEventListener('click', () => {
-                q.parentElement.classList.toggle('active');
-            });
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        const navbar = document.querySelector('.navbar');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                navbar.classList.add('navbar-hidden');
+            } else {
+                navbar.classList.remove('navbar-hidden');
+            }
+            lastScrollTop = scrollTop;
         });
 
-        // 文件上传
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = document.getElementById('darkModeIcon');
+        const html = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            html.setAttribute('data-bs-theme', 'dark');
+            darkModeIcon.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', function() {
+            const isDark = html.getAttribute('data-bs-theme') === 'dark';
+            if (isDark) {
+                html.setAttribute('data-bs-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                darkModeIcon.textContent = '🌙';
+            } else {
+                html.setAttribute('data-bs-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                darkModeIcon.textContent = '☀️';
+            }
+        });
+
+        // Update copyright year
+        document.addEventListener('DOMContentLoaded', function() {
+            const year = new Date().getFullYear();
+            const copyright = document.querySelector('footer p.mb-0');
+            if (copyright) {
+                copyright.innerHTML = `© ${year} Claw健康监护室. 所有域名出售中，有意联系：<a href="mailto:shuo65@qq.com" class="text-white">shuo65@qq.com</a>`;
+            }
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
+        });
+
+        // File upload
         document.getElementById('logFile').addEventListener('change', function(e) {
             if (e.target.files.length > 0) {
                 alert('文件 "' + e.target.files[0].name + '" 已选择。健康检查功能正在开发中，敬请期待！');
