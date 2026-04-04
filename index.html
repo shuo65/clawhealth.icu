@@ -633,7 +633,7 @@ sudo chmod -R 755 /opt/openclaw</code></pre>
                         <h4>💾 内存优化</h4>
                         <ul>
                             <li><strong>开启ZRAM</strong>（Linux）：
-                                <pre class="bg-light p-2 rounded small"><code>sudo apt install zram-config</code></pre>
+                                <pre class="bg-light p-2 rounded" style="font-size: 0.75rem;"><code>sudo apt install zram-config</code></pre>
                             </li>
                             <li><strong>调整Swap大小</strong>：建议物理内存的1.5-2倍</li>
                             <li><strong>使用量化模型</strong>：Q4_K_M在速度和精度间平衡</li>
@@ -646,7 +646,7 @@ sudo chmod -R 755 /opt/openclaw</code></pre>
                         <h4>🎮 显存优化</h4>
                         <ul>
                             <li><strong>GPU卸载</strong>：将部分层卸载到CPU
-                                <pre class="bg-light p-2 rounded small"><code>"gpu_layers": 20</code></pre>
+                                <pre class="bg-light p-2 rounded" style="font-size: 0.75rem;"><code>"gpu_layers": 20</code></pre>
                             </li>
                             <li><strong>使用GPU.0内存节省</strong>：<code>--gpu-memory 0.9</code></li>
                             <li><strong>多GPU并行</strong>：<code>--gpu-layers 40 --gpu-layers2 20</code></li>
@@ -714,7 +714,7 @@ sudo systemctl status openclaw</code></pre>
                         <h4>日志管理</h4>
                         <ul>
                             <li><strong>日志轮转</strong>：使用logrotate防止日志过大
-                                <pre class="bg-light p-2 rounded small"><code>/var/log/openclaw/*.log {
+                                <pre class="bg-light p-2 rounded" style="font-size: 0.75rem;"><code>/var/log/openclaw/*.log {
     daily
     rotate 7
     compress
