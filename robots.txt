@@ -1,7 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://www.clawhealth.icu/sitemap.xml
-
-Disallow: /temp/
-Disallow: /admin/
